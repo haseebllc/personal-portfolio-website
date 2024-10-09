@@ -1514,19 +1514,19 @@ a {
   transform: none;
 }
 #works .overlay .content__slice .works__conainer .work__box__wrap .work__box .workBoxImg_1 {
-  background-image: url(../images/works/img8.png);
+  background-image: url(../../images/works/img8.png);
 }
 #works .overlay .content__slice .works__conainer .work__box__wrap .work__box .workBoxImg_2 {
-  background-image: url(../images/works/img3.png);
+  background-image: url(../../images/works/img3.png);
 }
 #works .overlay .content__slice .works__conainer .work__box__wrap .work__box .workBoxImg_3 {
-  background-image: url(../images/works/img4.png);
+  background-image: url(../../images/works/img4.png);
 }
 #works .overlay .content__slice .works__conainer .work__box__wrap .work__box .workBoxImg_4 {
-  background-image: url(../images/works/img5.png);
+  background-image: url(../../images/works/img5.png);
 }
 #works .overlay .content__slice .works__conainer .work__box__wrap .work__box .workBoxImg_5 {
-  background-image: url(../images/works/img1.jpg);
+  background-image: url(../../images/works/img1.jpg);
 }
 #works .overlay .content__slice .works__conainer .work__box__wrap .work__box .workBoxImg_6 {
   display: flex;

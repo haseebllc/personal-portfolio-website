@@ -619,19 +619,34 @@ a {
                             transform: none;
                         }
                         .workBoxImg_1 {
-                            background-image: url(../images/works/img8.png);
+                            // test path >>
+                            // background-image: url(../images/works/img1.jpg) ;
+                            // injecting minified from dist path >
+                            background-image: url(../../images/works/img8.png);
                         }
                         .workBoxImg_2 {
-                            background-image: url(../images/works/img3.png);
+                            // test path >>
+                            // background-image: url(../images/works/img1.jpg) ;
+                            // injecting minified from dist path >
+                            background-image: url(../../images/works/img3.png);
                         }
                         .workBoxImg_3 {
-                            background-image: url(../images/works/img4.png);
+                            // test path >>
+                            // background-image: url(../images/works/img1.jpg) ;
+                            // injecting minified from dist path >
+                            background-image: url(../../images/works/img4.png);
                         }
                         .workBoxImg_4 {
-                            background-image: url(../images/works/img5.png);
+                            // test path >>
+                            // background-image: url(../images/works/img1.jpg) ;
+                            // injecting minified from dist path >
+                            background-image: url(../../images/works/img5.png);
                         }
                         .workBoxImg_5 {
-                            background-image: url(../images/works/img1.jpg);
+                            // test path >>
+                            // background-image: url(../images/works/img1.jpg) ;
+                            // injecting minified from dist path >
+                            background-image: url(../../images/works/img1.jpg);
                         }
                         .workBoxImg_6 {
                             display: flex;
