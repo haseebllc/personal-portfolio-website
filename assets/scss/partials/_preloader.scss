@@ -1,0 +1,261 @@
+.preloader__Script {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.preloader {
+    transition: 0.5s ease;
+    width: 100%;
+    height: 100vh;
+    background-color: $themeDark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    display: grid;
+    place-items: center;
+    p {
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+    }
+}
+
+.startup {
+    visibility: visible;
+    width: 100%;
+    height: 100vh;
+    background-color: $themeDark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    animation: startup 0.5s ease forwards;
+    animation-delay: 4s;
+    .content {
+        width: max-content;
+        height: max-content;
+        position: relative;
+        .spanWrap {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            color: white;
+            transition: ease 0.4s 1.5s;
+            animation: spanWrap 0.5s ease forwards;
+            animation-delay: 2s;
+            .span {
+                text-transform: capitalize;
+                font-size: 25px;
+                font-weight: 300;
+                padding: 0 7px;
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            .span1 {
+                animation: span1 0.5s ease forwards;
+                animation-delay: 0.5s;
+            }
+            .span2 {
+                animation: span2 0.5s ease forwards;
+                animation-delay: 1s;
+            }
+            .span3 {
+                animation: span3 0.5s ease forwards;
+                animation-delay: 1.5s;
+            }
+        }
+        .textBoxWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-50%);
+            animation: textBoxWrap 0.5s forwards;
+            animation-delay: 3.5s;
+            .textBoxWrapInner {
+                position: relative;
+                width: 200px;
+                height: 50px;
+                opacity: 0;
+                animation: textBoxWrapInner 0.2s forwards;
+                animation-delay: 2.5s;
+                .textBoxWrapInner__after {
+                    width: 0;
+                    height: 100%;
+                    background-color: orange;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    animation: textBoxWrapInner__after 1s ease;
+                    animation-delay: 2.5s;
+                }
+                .authorText {
+                    text-transform: capitalize;
+                    font-size: 21px;
+                    font-weight: 600;
+                    color: black;
+                    font-style: italic;
+                    text-align: center;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateY(50%);
+                    animation: authorText 0.5s forwards;
+                    animation-delay: 3s;
+                }
+            }
+        }
+    }
+}
+
+// 1 
+@keyframes span1 {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+// 2 
+@keyframes span2 {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+// 3 
+@keyframes span3 {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+// 4
+@keyframes spanWrap {
+    0% {
+        transform: translateX(-50%);
+        opacity: 100;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50px);
+        opacity: 0;
+    }
+}
+
+// 5
+@keyframes preloaderYellowBox {
+    0% {
+        width: 0px;
+    }
+    50% {
+        width: 200px;
+        transform: translateX(20px);
+    }
+    100% {
+        width: 0px;
+        transform: translateX(-20px);
+    }
+}
+
+// 6 
+@keyframes textBoxWrapInner {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+// 7 
+@keyframes textBoxWrapInner__after {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+// 8 
+@keyframes authorText {
+    0% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
+}
+
+// 9 
+@keyframes textBoxWrap {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 100;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50px);
+        opacity: 0;
+    }
+}
+
+// 10 
+@keyframes startup {
+    0% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+// responsive  ______________________________________________________________
+@media screen and (max-width:600px) {
+    .startup {
+        .content {
+            .spanWrap {
+                flex-direction: column;
+                .span {
+                    font-size: 21px;
+                    font-weight: 400;
+                    padding: 7px;
+                }
+            }
+            .textBoxWrap {
+                .textBoxWrapInner {
+                    width: 176px;
+                    height: 45px;
+                    .authorText {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

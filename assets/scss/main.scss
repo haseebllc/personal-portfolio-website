@@ -1,0 +1,1164 @@
+// main.scss 
+@import "./partials/var";
+@import "./partials/fonts";
+@import "./partials/scrollbar";
+@import "./partials/preloader";
+@import "./partials/backToTop";
+@import "./partials/floatWindow";
+@import "./partials/jarallax";
+@import "./partials/navbar";
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+    font-weight: 100;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.bodyScript {
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+img {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+//  HEADER
+//  IMPORTED AS PARTIAL
+// _____________________________________________________________________________________
+// 
+// 
+// HERO SECTION
+// _____________________________________________________________________________________
+#Hero {
+    color: $white;
+    .Hero__container {
+        padding: 0;
+        max-width: 1170px;
+        .hero__row {
+            padding-bottom: 100px;
+            max-width: 1170px;
+            .hero__col__1 {
+                padding: 0;
+                .hero__col__1_contactAncors {
+                    display: none;
+                }
+                .col_1__textContent {
+                    padding: 70px 0 0 120px;
+                    h1 {
+                        text-transform: capitalize;
+                        font-size: 80px;
+                        font-weight: 500;
+                        .themeColorText {
+                            color: $theme;
+                            font-weight: 500;
+                        }
+                        .textAnimationContainer {
+                            height: 100px;
+                            padding-right: 15px;
+                            width: max-content;
+                            position: relative;
+                            .caret {
+                                width: 6px;
+                                height: 81px;
+                                background-color: white;
+                                background-color: $theme;
+                                background-color: orange;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 0;
+                                animation: caret-blink 1s infinite;
+                            }
+                            @keyframes caret-blink {
+                                0%,
+                                100% {
+                                    opacity: 1;
+                                }
+                                50% {
+                                    opacity: 0;
+                                }
+                            }
+                            .AnimateTextInThisElement {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    h2 {
+                        font-size: 21px;
+                        color: $white;
+                        padding: 7px 0;
+                    }
+                }
+                .col_1__videoToggler {
+                    display: flex;
+                    align-items: center;
+                    padding-top: 50px;
+                    .videoIcon_before {
+                        width: 100px;
+                        height: 1px;
+                        background-color: white;
+                    }
+                    .videoIcon_Container {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        &:hover .videoIcon {
+                            border-color: $theme;
+                            span {
+                                color: $theme;
+                            }
+                        }
+                        &:hover .iconText {
+                            color: $theme;
+                        }
+                        .videoIcon {
+                            transition: ease 0.3s;
+                            width: 75px;
+                            height: 75px;
+                            border-radius: 100%;
+                            border: 1px solid $white;
+                            margin: 0 23px;
+                            display: grid;
+                            place-items: center;
+                            span {
+                                font-size: 25px;
+                                transition: ease 0.3s;
+                            }
+                        }
+                        .iconText {
+                            text-transform: capitalize;
+                            font-weight: 400;
+                            color: $white;
+                            font-size: 19px;
+                            transition: ease 0.3s;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ABOUT SECTION
+// _____________________________________________________________________________________
+#About {
+    .About__content {
+        color: white;
+        .About__container {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            padding: 100px 0;
+            .experienceBox__wrap {
+                display: flex;
+                .AboutText {
+                    height: 100%;
+                    width: 150px;
+                    position: relative;
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: max-content;
+                        transform: translate(-50%, -50%) rotate(-90deg);
+                        font-size: 70px;
+                        font-weight: 600;
+                        letter-spacing: 2px;
+                        color: $fadeWhite;
+                        text-transform: uppercase;
+                    }
+                }
+                .experienceBox {
+                    padding: 50px 50px 50px 100px;
+                    border: 1px solid $white;
+                    display: grid;
+                    align-content: center;
+                    .number {
+                        text-align: center;
+                        font-size: 300px;
+                        font-weight: 600;
+                        height: max-content;
+                    }
+                    .text {
+                        text-align: right;
+                        padding-top: 30px;
+                        text-transform: capitalize;
+                        font-size: 21px;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        line-height: 1.5;
+                        span {
+                            position: relative;
+                            &::before {
+                                position: absolute;
+                                top: 50%;
+                                right: calc(100% + 10px);
+                                transform: translateY(-50%);
+                                background-color: $white;
+                                width: 70px;
+                                height: 1px;
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+            .contentBox {
+                padding: 0 30px;
+                .heading {
+                    h3 {
+                        font-size: 46px;
+                        font-weight: 600;
+                        span {
+                            font-size: 46px;
+                            font-weight: 600;
+                            color: $theme;
+                        }
+                    }
+                }
+                .summary__skillBar__container {
+                    max-width: 550px;
+                    .summary {
+                        color: $LightWhite;
+                        padding-top: 50px;
+                        line-height: 1.7;
+                        font-weight: 100;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                    }
+                    .Bars__container {
+                        padding-top: 50px;
+                        .NewBar__wrap {
+                            padding-bottom: 35px;
+                            .bar__text {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                p {
+                                    text-transform: capitalize;
+                                    font-size: 18px;
+                                    font-weight: 300;
+                                }
+                            }
+                            .bar {
+                                width: 100%;
+                                height: 40px;
+                                background-color: $themeDark;
+                                margin-top: 12px;
+                                .bar__percent {
+                                    width: 98%;
+                                    height: 100%;
+                                    background-color: $theme;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RESUME SECTION
+// _____________________________________________________________________________________
+#Resume {
+    .resume__background {
+        background-image: url(../../images/resume.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        color: white;
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.307);
+            padding: 100px 0 200px 0;
+        }
+        .resume__heading {
+            text-transform: capitalize;
+            color: $white;
+            width: max-content;
+            margin: auto;
+            p {
+                color: $theme;
+                font-size: 20px;
+                font-weight: 500;
+                font-style: oblique;
+                letter-spacing: 1.5px;
+            }
+            h4 {
+                font-size: 33px;
+                font-weight: 600;
+                font-style: oblique;
+            }
+        }
+        .education_experience_container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 100px;
+            .experience_box {
+                transform: translateY(120px);
+            }
+            .education_experience_box {
+                background-color: rgba(255, 255, 255, 0.236);
+                transition: 0.4s ease;
+                padding: 0 40px 50px 40px;
+                &:hover {
+                    background-color: $theme;
+                }
+                >h5 {
+                    font-size: 40px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    transform: translateY(-55%);
+                }
+                .specialization {
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                    padding: 30px 0;
+                }
+                .university,
+                .date {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-style: oblique;
+                    padding-bottom: 7px;
+                }
+                .description {
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    line-height: 1.7;
+                    padding: 25px 0;
+                    margin-bottom: 25px;
+                    border-bottom: 1px solid $white;
+                }
+            }
+        }
+    }
+}
+
+// CONTACT-DETAILS & PERSONAL-SKILLs SECTION
+// _____________________________________________________________________________________
+.contactDetail__skillBox__section {
+    background-color: $fakeWhite;
+    width: 100%;
+    color: black;
+    .contactDetail__skillBox__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 100px 0;
+        .Resume__ContactDetal {
+            >h4 {
+                text-transform: capitalize;
+                font-weight: 700;
+                font-size: 21px;
+                padding-bottom: 30px;
+            }
+            >p {
+                font-size: 17px;
+                font-weight: 100;
+                line-height: 1.6;
+                text-transform: capitalize;
+                padding-bottom: 20px;
+                >span {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+            }
+            ul {
+                padding-top: 50px;
+                li {
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    padding: 15px 0;
+                    border-top: 1px solid rgba(0, 0, 0, 0.087);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.087);
+                    span {
+                        width: 130px;
+                        display: inline-block;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .Resume__skillBox {
+            display: grid;
+            justify-items: end;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            .skillBox {
+                display: grid;
+                place-items: center;
+                position: relative;
+                text-align: center;
+                padding: 30px 18px;
+                max-width: 250px;
+                height: max-content;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 1px 1px 12px 4px rgba(0, 0, 0, 0.056);
+                color: black;
+                &::before,
+                &::after {
+                    content: "";
+                    width: 100px;
+                    height: 100px;
+                    background-color: rgba(0, 0, 0, 0.096);
+                    position: absolute;
+                    border-radius: 100%;
+                    top: 0;
+                    right: 0;
+                    transition: ease 0.35s;
+                }
+                // before & after
+                &::before {
+                    transform: translate(20%, -30%);
+                }
+                &::after {
+                    transform: translate(50%, 20%);
+                }
+                // hover before & after
+                &:hover::before {
+                    transform: translate(10%, -40%);
+                }
+                &:hover::after {
+                    transform: translate(60%, 30%);
+                }
+                .skillBox__percentAnim {
+                    width: 70px;
+                    margin: auto;
+                    .skillBox__percentAnim__img {
+                        width: 100%;
+                    }
+                }
+                .skillName {
+                    font-weight: 600;
+                    font-size: 21px;
+                    text-transform: capitalize;
+                    padding: 12px 0;
+                }
+                .skillDesciption {
+                    font-weight: 100;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    .Resume__download__btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+            text-transform: capitalize;
+            padding: 10px 40px;
+            background-color: black;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid black;
+            transition: 0.3s ease;
+            span {
+                padding-right: 5px;
+                font-size: 19px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                width: 0;
+                height: 1.1px;
+                background-color: black;
+                bottom: -12px;
+                left: -30%;
+                transform: translateX(50%);
+                transition: 0.4s ease;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+            &:hover {
+                background-color: transparent;
+                color: black;
+            }
+        }
+    }
+}
+
+// WORKS SECTION
+// _____________________________________________________________________________________
+#works {
+    color: black;
+    background-color: $skin;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../../images/project1.jpg);
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: $opacityWhite;
+        padding: 100px 0;
+        .floatingSectionPathNameText {
+            padding-bottom: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .anim {
+                width: 50px;
+                height: 1px;
+                background-color: black;
+            }
+            p {
+                padding-left: 7px;
+                font-size: 16px;
+                font-weight: 300;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                strong {
+                    font-weight: 600;
+                }
+                span {
+                    font-weight: 600;
+                    padding: 0 15px;
+                }
+            }
+        }
+        .heading__slice {
+            h4 {
+                font-size: 60px;
+                font-weight: 200;
+                span {
+                    font-weight: 500;
+                }
+            }
+            .ourWorks__btn {
+                display: flex;
+                align-items: center;
+                padding: 50px 0 100px 0;
+                p {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                }
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    background-color: rgba(117, 117, 117, 0.261);
+                    margin: 0 15px;
+                    border-radius: 100%;
+                    transition: 0.4s ease;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.13);
+                    }
+                    span {
+                        font-size: 18px;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .content__slice {
+            .works__conainer {
+                row-gap: 50px;
+                column-gap: 30px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                .work__box__wrap {
+                    width: 100%;
+                    .work__box {
+                        color: black;
+                        width: 100%;
+                        overflow: hidden;
+                        &:hover .work__box_img {
+                            transform: scale(1.05);
+                        }
+                        &:hover .workBoxImg_6 {
+                            transform: none;
+                        }
+                        .workBoxImg_1 {
+                            background-image: url(../images/works/img8.png);
+                        }
+                        .workBoxImg_2 {
+                            background-image: url(../images/works/img3.png);
+                        }
+                        .workBoxImg_3 {
+                            background-image: url(../images/works/img4.png);
+                        }
+                        .workBoxImg_4 {
+                            background-image: url(../images/works/img5.png);
+                        }
+                        .workBoxImg_5 {
+                            background-image: url(../images/works/img1.jpg);
+                        }
+                        .workBoxImg_6 {
+                            display: flex;
+                            align-items: center;
+                            background-color: rgba(249, 242, 233, 0.931);
+                            &:hover .seeAllBtn p::after {
+                                width: calc(100% - 10px);
+                            }
+                            &:hover .seeAllBtn .fa-arrow-up-right-from-square {
+                                transform: rotate(0);
+                            }
+                            .seeAllBtn {
+                                width: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                display: flex;
+                                p {
+                                    text-transform: capitalize;
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                    padding: 0 10px 0 0;
+                                    letter-spacing: 0;
+                                    position: relative;
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        bottom: -5px;
+                                        left: -40%;
+                                        transform: translateX(50%);
+                                        width: 0;
+                                        background-color: black;
+                                        height: 1px;
+                                        transition: 0.4s ease;
+                                    }
+                                }
+                                .fa-arrow-up-right-from-square {
+                                    font-size: 16px;
+                                    transform: rotate(50deg);
+                                    transition: 0.4s ease;
+                                }
+                            }
+                        }
+                        .work__box_img {
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            height: 200px;
+                            transition: 0.6s ease;
+                        }
+                        p {
+                            padding: 20px 0 10px 0;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            font-weight: 400;
+                            span {
+                                font-weight: 600;
+                                color: $darkOrange;
+                            }
+                        }
+                        h4 {
+                            font-size: 26px;
+                            font-weight: 500;
+                            color: black;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// REVIEW SECTION
+// _____________________________________________________________________________________
+#Reviews {
+    .Reviews__bg {
+        background-color: $lightGray;
+        padding: 100px 0;
+        .text {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            p {
+                text-align: right;
+                width: 100%;
+                font-size: 16px;
+                font-weight: 300;
+                padding-right: 15px;
+                text-transform: lowercase;
+                &::first-letter {
+                    text-transform: capitalize;
+                }
+            }
+            .anim {
+                width: 100px;
+                height: 1px;
+                background-color: black;
+            }
+        }
+        .heading {
+            width: 100%;
+            padding-top: 70px;
+            h5 {
+                width: 100%;
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 50px;
+                font-weight: 200;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+        .content {
+            padding-top: 120px;
+            .ReviewsSwiper__CutomBullets__container {
+                .swiper1 {
+                    width: max-content;
+                    margin: auto;
+                    .swiper-slide:nth-child(odd) {
+                        transform: translateY(-50%);
+                    }
+                    .swiper-slide {
+                        padding: 0 2.5px;
+                        cursor: pointer;
+                        .bulletFocusAnimation__Script {
+                            border-color: orange !important;
+                        }
+                        .bulletFocusAnimation {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 100%;
+                            border: 4px solid transparent;
+                            padding: 4.5px;
+                            transition: 0.3s ease;
+                            .bulletHoverAnimation {
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 100%;
+                                outline: 9px solid transparent;
+                                outline: 9px solid transparent;
+                                transition: 0.3s ease;
+                                .bulletImg {
+                                    height: 100%;
+                                    border-radius: 100%;
+                                    overflow: hidden;
+                                    img {
+                                        width: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                                &:hover {
+                                    outline: 9px solid rgba(255, 255, 255, 0.307);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper2 {
+                width: 100%;
+                overflow: hidden;
+                .svg {
+                    width: 100%;
+                    text-align: center;
+                    padding: 50px 0 20px 0;
+                    .quote-icon {
+                        width: 42px;
+                        height: 42px;
+                        fill: $theme2;
+                    }
+                }
+                .swiper-button-prev-SCRIPT,
+                .swiper-button-next-SCRIPT {
+                    opacity: 40%;
+                    pointer-events: none;
+                }
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 50px;
+                    height: 50px;
+                    background-color: $gray;
+                    color: black;
+                    border-radius: 100%;
+                    transition: 0.5s ease;
+                }
+                .swiper-button-next::after,
+                .swiper-button-prev::after {
+                    content: "";
+                }
+                .swiper-button-next span,
+                .swiper-button-prev span {
+                    font-size: 20px;
+                    transition: 0.3s ease;
+                }
+                .swiper-button-next:hover span,
+                .swiper-button-prev:hover span {
+                    font-size: 25px;
+                }
+                .swiper-button-next {
+                    span {
+                        transform: rotate(180deg);
+                    }
+                }
+                .swiper-slide {
+                    text-align: center;
+                    padding: 0 30px;
+                    .clientName {
+                        font-size: 26px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                    .date {
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        padding: 10px 0;
+                    }
+                    .reviewText {
+                        font-size: 21px;
+                        font-weight: 300;
+                        line-height: 2;
+                        color: rgba(96, 96, 96, 0.837);
+                        max-width: 550px;
+                        margin: auto;
+                        padding-top: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// JUMP-TO-CONTACT SECTION
+// _____________________________________________________________________________________
+.jumpToContact__Section {
+    background-color: $lightGray;
+    color: black;
+    padding: 100px 0;
+    .jumpToContact__headText__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .headText {
+            text-align: right;
+            width: max-content;
+            text-align: right;
+            font-size: 16px;
+            font-weight: 300;
+            text-transform: lowercase;
+            padding-right: 15px;
+        }
+        .headText__sudo {
+            width: 120px;
+            height: 0.5px;
+            background-color: black;
+        }
+    }
+    main {
+        text-align: center;
+        .heading {
+            padding-top: 100px;
+            h5 {
+                width: 100%;
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 50px;
+                font-weight: 200;
+                span {
+                    font-weight: 700;
+                }
+                .br1 {
+                    display: none;
+                }
+            }
+        }
+        .jumpToContact__button {
+            padding-top: 100px;
+            a {
+                color: black;
+                width: max-content;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                transition: 0.3s linear;
+                padding: 20px 40px;
+                border-radius: 40px;
+                background-color: $theme2;
+                p {
+                    text-transform: uppercase;
+                    padding-right: 20px;
+                    font-weight: 500;
+                }
+                span {
+                    color: $theme2;
+                    background-color: black;
+                    border-radius: 100%;
+                    padding: 10px;
+                    font-size: 16px;
+                    transition: 0.4s ease;
+                }
+                &:hover span {
+                    transform: rotate(90deg) scale(1.2);
+                }
+                &:hover {
+                    background-color: $lightGray;
+                }
+            }
+        }
+    }
+}
+
+// FOOTER SECTION
+// _____________________________________________________________________________________
+.footer {
+    background-color: black;
+    color: white;
+    padding: 100px 0;
+    .footer__mainRow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .footerMainRow__col__1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .box1 {
+                .logo {
+                    width: 100px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                p {
+                    padding: 30px 0;
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    font-weight: 200;
+                    font-style: italic;
+                }
+                .form {
+                    background-color: $themeDark;
+                    width: 100%;
+                    border-radius: 40px;
+                    form {
+                        border-radius: 40px;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        transition: 0.3s ease;
+                        &:hover {
+                            background-color: white;
+                        }
+                        &:hover input {
+                            color: black;
+                        }
+                        &:hover input::placeholder {
+                            color: black;
+                        }
+                        input {
+                            flex: 1;
+                            height: 40px;
+                            background-color: transparent;
+                            padding-left: 10px;
+                            border: none;
+                            color: $LightWhite;
+                            font-size: 16px;
+                            letter-spacing: 1px;
+                            outline: none;
+                            &::placeholder {
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                                color: $LightWhite;
+                            }
+                        }
+                        button {
+                            border: none;
+                            border-radius: 100%;
+                            width: 35px;
+                            height: 35px;
+                            background-color: $theme2;
+                            color: black;
+                            transition: 0.4s ease;
+                            cursor: pointer;
+                            span {
+                                font-size: 25px;
+                                transform: translateY(2px);
+                            }
+                            &:hover {
+                                transform: scale(1.2) rotate(-40deg);
+                            }
+                        }
+                    }
+                }
+            }
+            .box2 {
+                padding-top: 50px;
+                .social__icons {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        font-size: 21px;
+                        color: white;
+                        transition: 0.3s ease;
+                        text-align: center;
+                        width: 40px;
+                        height: 30px;
+                        border-bottom: 1px solid transparent;
+                        .icon {
+                            transition: 0.2s ease;
+                        }
+                        &:hover {
+                            border-color: white;
+                        }
+                        &:hover .icon {
+                            transform: translateY(-7px);
+                        }
+                    }
+                }
+                .copyRight__stamp {
+                    padding-top: 70px;
+                    p {
+                        text-transform: capitalize;
+                        color: $LightWhite;
+                    }
+                }
+            }
+        }
+        .footerMainRow__col__2 {
+            display: flex;
+            justify-content: center;
+            .navigations__location__wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                ul {
+                    li {
+                        .footer__Contact_ancor {
+                            padding-left: 12px !important;
+                            color: $theme2 !important;
+                            position: relative;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-30%);
+                                left: 0;
+                                width: 100%;
+                                height: 3px;
+                                background-color: white;
+                            }
+                        }
+                        a {
+                            padding: 9px 0;
+                            text-transform: capitalize;
+                            font-size: 23px;
+                            font-weight: 600;
+                            transition: 0.4s ease;
+                            &:hover {
+                                padding-left: 12px;
+                                color: $theme2;
+                            }
+                        }
+                    }
+                }
+                h5 {
+                    font-size: 18px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    padding: 120px 0 30px 0;
+                }
+                p {
+                    color: $LightWhite;
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+            }
+        }
+        .footerMainRow__col__3 {
+            display: flex;
+            justify-content: right;
+            .navigations__location__wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: max-content;
+                .navigations {
+                    ul {
+                        li,
+                        li a {
+                            cursor: pointer;
+                            padding: 7px 0;
+                            font-weight: 200;
+                            font-size: 15px;
+                            text-transform: capitalize;
+                            transition: 0.3s ease;
+                            width: max-content;
+                            color: $LightWhite;
+                            &:hover {
+                                padding-left: 7px;
+                                color: white;
+                            }
+                        }
+                        .mapLocationAncor,
+                        .repoSourceAncor {
+                            padding: 0;
+                        }
+                    }
+                }
+                .location {
+                    h5 {
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        padding: 120px 0 30px 0;
+                    }
+                    p {
+                        color: $LightWhite;
+                        font-size: 18px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}

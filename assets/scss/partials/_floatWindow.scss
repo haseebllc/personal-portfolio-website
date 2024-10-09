@@ -1,0 +1,336 @@
+   .FloatWindowContainer__Script {
+       visibility: visible !important;
+       opacity: 100 !important;
+       pointer-events: all !important;
+   }
+   
+   .FloatWindowContainer {
+       visibility: hidden;
+       opacity: 0;
+       transition: ease 0.4s;
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       overflow-y: scroll;
+       overflow-x: hidden;
+       background-color: $themeDark;
+       z-index: 100;
+       pointer-events: none;
+       .FloatWindow__outter {
+           position: relative;
+           width: 100%;
+           height: 100%;
+           //    
+           // float window close btn 
+           .closeFloatWindow__Script {
+               transform: translateY(0) !important;
+           }
+           .closeFloatWindow {
+               transform: translateY(-100%);
+               background-color: $themeDark;
+               width: 100%;
+               color: white;
+               display: flex;
+               justify-content: space-between;
+               padding: 0 15px;
+               transition: 0.3s ease;
+               overflow: hidden;
+               .text p {
+                   text-transform: capitalize;
+                   font-size: 14px;
+                   font-weight: 300;
+                   padding: 10px 0;
+               }
+               .icon {
+                   position: relative;
+                   .icon_inner {
+                       cursor: pointer;
+                       position: absolute;
+                       top: 0;
+                       right: 0;
+                       background-color: $theme;
+                       width: max-content;
+                       height: calc(100% + 50px);
+                       display: flex;
+                       align-items: center;
+                       transform: rotate(-30deg) translateY(-30px);
+                       padding: 0 4px;
+                       span {
+                           color: white;
+                           font-size: 22px;
+                           font-weight: 500;
+                           transform: rotate(30deg);
+                           transition: 0.3s ease-in;
+                           pointer-events: none;
+                       }
+                       &:hover span {
+                           transform: rotate(120deg);
+                       }
+                   }
+               }
+           }
+           //    
+           // float Window 
+           .FloatWindow {
+               width: 100%;
+               height: 100%;
+           }
+       }
+   }
+   /* _____ ______ _____ Personal Video _____ ______ _______
+   */
+   
+   .personalVideo__container__Script {
+       display: block !important;
+   }
+   
+   .personalVideo__container {
+       position: relative;
+       width: 100%;
+       display: none;
+       // placeholder 
+       .personalVideo__placeHolder__Script {
+           opacity: 0 !important;
+           visibility: hidden !important;
+           pointer-events: none !important;
+       }
+       .personalVideo__placeHolder {
+           transition: 0.3s ease;
+           opacity: 100;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           min-height: 100vh;
+           z-index: 5;
+           background-color: black;
+           color: white;
+           display: grid;
+           place-items: center;
+       }
+       // iframe 
+       .personalVideo__iframeWrap__Script {
+           opacity: 100 !important;
+           visibility: visible !important;
+       }
+       .personalVideo__iframeWrap {
+           opacity: 0;
+           visibility: hidden;
+           width: 100%;
+           height: max-content;
+           .personalVideo__iframe {
+               width: 100%;
+               min-height: 100vh;
+               height: max-content;
+               border: none;
+               outline: none;
+           }
+       }
+   }
+   /* _____ ______ _____ Hire-Me container _____ ______ _______
+   */
+   
+   .HireMe__container__Script {
+       display: block !important;
+   }
+   
+   .HireMe__container {
+       display: none;
+       background-color: $themeDark;
+       color: white;
+       padding: 50px 0;
+       .HireMe__container__inner__Script {
+           opacity: 100 !important;
+       }
+       .HireMe__container__inner {
+           opacity: 0;
+           .HireMe__heading {
+               max-width: 700px;
+               margin: auto;
+               .text1 {
+                   font-size: 35px;
+                   font-weight: 300;
+                   text-transform: capitalize;
+                   text-align: center;
+               }
+               .text2 {
+                   font-size: 14px;
+                   font-weight: 100;
+                   text-transform: capitalize;
+                   text-align: center;
+                   line-height: 1.6;
+                   padding: 25px 0;
+               }
+           }
+           .HireMe__formBox {
+               padding: 0 50px;
+               input {
+                   width: 100%;
+                   height: 40px;
+                   margin-top: 30px;
+                   background-color: transparent;
+                   border: none;
+                   outline: none;
+                   border-bottom: .5px solid white;
+                   color: white;
+                   font-size: 18px;
+                   font-family: raleway;
+                   padding-left: 5px;
+                   font-weight: 200;
+                   &::placeholder {
+                       text-transform: capitalize;
+                       color: white;
+                       font-size: 14px;
+                       font-weight: 100;
+                       font-family: raleway;
+                       padding-left: 5px;
+                   }
+               }
+               textarea {
+                   resize: none;
+                   width: 100%;
+                   min-height: 150px;
+                   margin-top: 30px;
+                   background-color: transparent;
+                   border: none;
+                   outline: none;
+                   border-bottom: .5px solid white;
+                   color: white;
+                   font-size: 18px;
+                   font-family: raleway;
+                   font-weight: 200;
+                   padding-left: 5px;
+                   &::placeholder {
+                       text-transform: capitalize;
+                       color: white;
+                       font-size: 16px;
+                       font-weight: 100;
+                       font-family: raleway;
+                       padding-left: 5px;
+                   }
+               }
+               .submitBtn {
+                   cursor: pointer;
+                   background-color: black;
+                   color: white;
+                   text-transform: capitalize;
+                   font-size: 14px;
+                   font-weight: 300;
+                   padding: 10px 50px;
+                   font-family: raleway;
+                   border: none;
+                   outline: none;
+                   border: 1px solid black;
+                   transition: 0.3s ease;
+                   margin: 20px 0;
+                   &:hover {
+                       background-color: transparent;
+                       color: white;
+                       border-color: white;
+                   }
+               }
+           }
+       }
+   }
+   /* _____ ______ _____ Make a Review Section _____ ______ _______
+   */
+   
+   .MakeReviewContainer__Script {
+       display: block !important;
+   }
+   
+   .MakeReviewContainer {
+       width: 100%;
+       background-color: $themeDark;
+       display: none;
+       max-width: 1170px;
+       margin: auto;
+       padding: 0 25px;
+       .MakeReviewContainer__Inner__Script {
+           opacity: 100 !important;
+           visibility: visible !important;
+       }
+       .MakeReviewContainer__Inner {
+           opacity: 0;
+           visibility: hidden;
+           transition: 0.4s ease;
+           padding: 45px 0;
+           .MakeReviewContainer__heading {
+               p {
+                   font-size: 25px;
+                   font-weight: 300;
+                   color: white;
+                   text-transform: capitalize;
+                   padding-bottom: 30px;
+               }
+           }
+           .MakeReviewContainer__form {
+               input,
+               button {
+                   display: block;
+               }
+               input {
+                   width: 100%;
+                   background-color: transparent;
+                   border: none;
+                   outline: none;
+                   border-bottom: 1px solid white;
+                   height: 40px;
+                   margin-top: 30px;
+                   font-size: 17px;
+                   color: white;
+                   padding-left: 5px;
+                   &::placeholder {
+                       text-transform: capitalize;
+                       font-size: 14px;
+                       font-weight: 400;
+                       font-family: syne;
+                       padding-left: 5px;
+                   }
+               }
+               textarea {
+                   padding-left: 5px;
+                   color: white;
+                   width: 100%;
+                   height: 150px;
+                   margin-top: 30px;
+                   background-color: transparent;
+                   border: none;
+                   outline: none;
+                   font-size: 16px;
+                   border-bottom: 1px solid white;
+                   resize: none;
+                   &::placeholder {
+                       text-transform: capitalize;
+                       font-size: 15px;
+                       font-weight: 400;
+                       font-family: syne;
+                       padding-left: 5px;
+                   }
+               }
+               .ReviewAdd_Btn {
+                   cursor: pointer;
+                   background-color: black;
+                   color: white;
+                   text-transform: capitalize;
+                   font-size: 14px;
+                   font-weight: 300;
+                   padding: 10px 50px;
+                   font-family: raleway;
+                   border: none;
+                   outline: none;
+                   border: 1px solid black;
+                   transition: 0.3s ease;
+                   margin: 20px 0;
+                   &:hover {
+                       background-color: transparent;
+                       color: white;
+                       border-color: white;
+                   }
+               }
+           }
+       }
+   }

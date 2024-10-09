@@ -1,0 +1,32 @@
+.BackToTop__Btn__Script {
+    visibility: visible !important;
+    opacity: 100 !important;
+    transform: translateY(0) !important;
+}
+
+.BackToTop__Btn {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.4s ease-out;
+    // 
+    position: fixed;
+    z-index: 500;
+    right: 50px;
+    bottom: 50px;
+    text-align: center;
+    a {
+        transition: 0.3s ease;
+        span {
+            font-size: 23px;
+            background-color: rgba(255, 255, 255, 0.788);
+            padding: 7px;
+            border-radius: 100%;
+            color: black;
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.299);
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
